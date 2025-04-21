@@ -1,12 +1,17 @@
 # NKUCS-Project-Survey
 
+> If this repo truly helps you, please leave a **Star**!
+> 
+> I will update this repo regularly.
+
+
 ## Author
-Sicheng Feng
+[Sicheng Feng](https://fscdc.github.io/)
 
-## Info
-MY project experience during NKU CS. If any questions, here are my connections: connection: wechat：starks888； email: fscnkucs@gmail.com
 
-Regularly organize and commit after the end of each semester in the later stage
+## Introduction
+This is my project experience during the NKU CS. If you have any questions, please email me ([Gmail](fscnkucs@gmail.com)).
 
-If this repo truly helps you, do not stint on your **Stars**, thank you！
-Do not forget to follow me!!
+
+## Contribution
+Feel free to pull a request, and I will reply as soon as possible.
