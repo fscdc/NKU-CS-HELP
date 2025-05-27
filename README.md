@@ -18,4 +18,4 @@ Feel free to pull a request, and I will reply as soon as possible.
 
 
 ## AD
-I highly recommend joining **Prof. Huan Wang** at Westlake University for PhD studies. Having done summer research there, I experienced excellent **research training** and a **vibrant atmosphere**. Check his page here: [HUAN](https://huanwang.tech/).
+I highly recommend joining **Prof. Huan Wang** at Westlake University for PhD studies. Having done summer research there, I experienced excellent **research training** and a **vibrant atmosphere**. HUAN is looking for PhD students for 26 Fall, check his page here: [HUAN](https://huanwang.tech/).
