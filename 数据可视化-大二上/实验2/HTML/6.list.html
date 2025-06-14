@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML-List</title>
+
+        <style>
+            #L01 {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333333;
+            }
+            
+            #L01 li {
+              float: left;
+            }
+            
+            #L01 li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 16px;
+              text-decoration: none;
+            }
+            
+            #L01 li a:hover {
+              background-color: #111111;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>列表</h1>
+        <hr>
+        <h2>无序列表</h2>
+        <ul >
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <h2>有序列表</h2>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+        <h2>定义列表</h2>
+        <dl>
+            <!--description term-->
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+
+        <h2>嵌套</h2>
+        <p>li中可以嵌套新的列表，或者其他 HTML 元素，比如图像和链接</p>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea
+              <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+              </ul>
+            </li>
+            <li>Milk</li>
+        </ul>
+
+        <h2>样式</h2>
+        <p>disc</p>
+        <ul style="list-style-type: disc;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <p>circle</p>
+        <ul style="list-style-type: circle;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <p>square</p>
+        <ul style="list-style-type: square;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <p>none</p>
+        <ul style="list-style-type: none;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <p>编号顺序类型，起始点</p>
+        <!--1, A, a, I, i-->
+        <ol type="I" start="2">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+
+        <p>设置 float:left 横向展示列表</p>
+        <ul id="L01">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </body>
+
+</html>

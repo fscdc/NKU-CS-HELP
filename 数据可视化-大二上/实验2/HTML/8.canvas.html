@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML-Canvas</title>
+    </head>
+
+    <body>
+        <canvas id="myCanvas1" width="200" height="100" 
+        style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+
+        <canvas id="myCanvas2" width="200" height="100" 
+        style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+
+        <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+            
+
+        <script>
+            let c1 = document.getElementById("myCanvas1");
+            let ctx1 = c1.getContext("2d");
+            ctx1.moveTo(0,0);
+            ctx1.lineTo(200,100);
+            ctx1.stroke();
+
+            let c2 = document.getElementById("myCanvas2");
+            let ctx2 = c2.getContext("2d");
+            ctx2.beginPath();
+            ctx2.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx2.stroke();
+
+            let c3 = document.getElementById("myCanvas3");
+            let ctx3 = c3.getContext("2d");
+            // Create gradient
+            let grd = ctx3.createLinearGradient(0,0,200,0);
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"white");
+            // Fill with gradient
+            ctx3.fillStyle = grd;
+            ctx3.fillRect(10,10,150,80);
+        </script>
+    </body>
+
+</html>

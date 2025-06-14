@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attr Selector</title>
+        <style>
+            a[target] {
+                background-color: yellow;
+            }
+
+            [title~=flower] {
+                border: 5px solid green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>CSS [attribute] Selector</h2>
+        <p>The links with a target attribute gets a yellow background:</p>
+
+        <a href="https://www.w3schools.com">w3schools.com</a>
+        <a href="http://www.disney.com" target="_blank">disney.com</a>
+        <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+        <h2>CSS [attribute~="value"] Selector</h2>
+<p>All images with the title attribute containing the word "flower" get a yellow border.</p>
+
+        <img src="../Picture/klematis.jpg" title="klematis flower" width="150" height="113">
+        <img src="../Picture/img_flwr.gif" title="flower" width="224" height="162">
+        <img src="../Picture/img_tree.gif" title="tree" width="200" height="358">
+    </body>
+
+</html>

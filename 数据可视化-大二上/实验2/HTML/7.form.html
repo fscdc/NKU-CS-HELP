@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML-Form</title>
+    </head>
+
+    <body>
+        <h1>表单</h1>
+        <hr>
+        <h2>文本输入</h2>
+        <!--action 属性定义提交表单时要执行的操作-->
+        <form action="" method="GET">
+            <label for="fname">First name:</label><br>
+            <!--如果要正确地被提交，每个输入字段必须设置一个 name 属性-->
+            <!-- <input type="text" id="fname" name="rname" value="John"><br> -->
+            <input type="text" id="fname" name="fname" value="John" size="40"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <!--提交按钮-->
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form> 
+
+        <hr>
+        <h2>单选按钮输入</h2>
+        <form>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+        </form>
+
+        <hr>
+        <h2>复选框</h2>
+        <form>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+        </form>
+
+        <hr>
+
+        <h2>下拉列表</h2>
+        <form action="">
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi" selected>Audi</option>
+            </select>
+            <input type="submit">
+        </form>
+
+        <hr>
+        <h2>文本域</h2>
+        <textarea name="message" rows="10" cols="30">
+        The cat was playing in the garden.
+        </textarea>
+
+        <hr>
+        <h2>按钮</h2>
+        <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+        <hr>
+        <h2>颜色选择</h2>
+        <form>
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor">
+        </form>
+
+        <hr>
+        <h2>日期</h2>
+        <form>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+        </form>
+
+        <hr>
+        <h2>数值</h2>
+        <form>
+            <label for="quantity">Quantity (between 1 and 5):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+        </form>
+
+        <hr>
+        <h2>文件</h2>
+        <form>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile">
+        </form>
+
+
+    </body>
+
+</html>

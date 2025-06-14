@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Tree Algorithm</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Decision Tree Algorithm</h1>
+
+    <p><strong>Decision Trees</strong> are one of the most widely used algorithms in <em>data mining</em> and machine learning. It is a supervised learning technique that is used for both classification and regression tasks.</p>
+
+    <h2>How it Works</h2>
+    <p>The decision tree builds a model in the form of a tree structure. Each internal node represents a "decision" based on an attribute, and each leaf node represents the outcome or class label.</p>
+
+    <!-- SVG Diagram of Decision Tree -->
+    <h2>Visualization of Decision Tree</h2>
+    <h3>Structure of a Decision Tree</h3>
+    <svg width="600" height="300">
+        <!-- 根节点 -->
+        <rect x="180" y="20" width="140" height="50" rx="15" ry="15" fill="#5AC9CC" />
+        <text x="225" y="50" fill="white" font-size="20" font-family="Arial">Root</text>
+    
+        <!-- 左边线条 -->
+        <line x1="250" y1="70" x2="150" y2="130" stroke="black" stroke-width="2"/>
+    
+        <!-- 右边线条 -->
+        <line x1="250" y1="70" x2="350" y2="130" stroke="black" stroke-width="2"/>
+    
+        <!-- 左叶子节点 -->
+        <rect x="100" y="130" width="140" height="50" rx="15" ry="15" fill="#4CA6DC" />
+        <text x="145" y="160" fill="white" font-size="20" font-family="Arial">Leaf1</text>
+    
+        <!-- 右内部节点 -->
+        <rect x="300" y="130" width="160" height="50" rx="15" ry="15" fill="#5AC9CC" />
+        <text x="325" y="160" fill="white" font-size="20" font-family="Arial">Internal node</text>
+    
+        <!-- 左边的内部节点线条 -->
+        <line x1="350" y1="180" x2="250" y2="240" stroke="black" stroke-width="2"/>
+    
+        <!-- 右边的内部节点线条 -->
+        <line x1="350" y1="180" x2="450" y2="240" stroke="black" stroke-width="2"/>
+    
+        <!-- 右叶子节点左 -->
+        <rect x="200" y="240" width="140" height="50" rx="15" ry="15" fill="#4CA6DC" />
+        <text x="245" y="270" fill="white" font-size="20" font-family="Arial">Leaf2</text>
+    
+        <!-- 右叶子节点右 -->
+        <rect x="400" y="240" width="140" height="50" rx="15" ry="15" fill="#4CA6DC" />
+        <text x="445" y="270" fill="white" font-size="20" font-family="Arial">Leaf3</text>
+    </svg>
+    
+
+    <!-- Canvas Visualization of Decision Tree -->
+    <h3>An Example of Decision Tree (loan approval)</h3>
+    <canvas id="treeCanvas" width="600" height="400"></canvas>
+    <script>
+        var canvas = document.getElementById('treeCanvas');
+        var ctx = canvas.getContext('2d');
+    
+        // 根节点 (年收入 > 20万)
+        ctx.fillStyle = '#5AC9CC';
+        ctx.fillRect(180, 20, 140, 50);
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.fillText('年收入 > 20万', 190, 50); // 调整了文字位置
+    
+        // 画线连接根节点到左右节点
+        // 左边线条
+        ctx.strokeStyle = 'green';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(250, 70); // 根节点底部
+        ctx.lineTo(140, 130); // 左分支 "是"
+        ctx.stroke();
+
+        // 右边线条
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(250, 70);
+        ctx.lineTo(360, 130); // 右分支 "否"
+        ctx.stroke();
+    
+        // 左边子节点 (可以贷款)
+        ctx.fillStyle = '#4CA6DC';
+        ctx.fillRect(80, 130, 140, 50);
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.fillText('可以贷款', 105, 160); // 调整了文字位置
+    
+        // 右边子节点 (有房产)
+        ctx.fillStyle = '#5AC9CC';
+        ctx.fillRect(300, 130, 140, 50);
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.fillText('有房产', 335, 160); // 调整了文字位置
+    
+        // 画线连接"有房产"到左右叶子节点
+        ctx.strokeStyle = 'green';
+        ctx.beginPath();
+        ctx.moveTo(370, 180); // "有房产"节点底部
+        ctx.lineTo(250, 240); // 左分支 "是"
+        ctx.stroke();
+
+        ctx.strokeStyle = 'red';
+        ctx.beginPath();
+        ctx.moveTo(370, 180);
+        ctx.lineTo(480, 240); // 右分支 "否"
+        ctx.stroke();
+    
+        // 左叶子节点 (可以贷款)
+        ctx.fillStyle = '#4CA6DC';
+        ctx.fillRect(200, 240, 140, 50);
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.fillText('可以贷款', 225, 270); // 调整了文字位置
+    
+        // 右叶子节点 (不能贷款)
+        ctx.fillStyle = '#4CA6DC';
+        ctx.fillRect(420, 240, 140, 50);
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.fillText('不能贷款', 445, 270); // 调整了文字位置
+    </script>
+    
+    <h2>Three Steps for Decision Tree Learning</h2>
+    <div class="steps">
+        <h3>1. Feature Selection</h3>
+        <p>Feature selection determines which features are used to make judgments. In the training data set, there may be many attributes for each sample, and the roles of different attributes may be large or small. Therefore, the function of feature selection is to screen out features with high correlation with classification results, that is, features with strong classification ability.</p>
+        <p>The criteria commonly used in feature selection are: information gain.</p>
+
+        <h3>2. Decision Tree Generation</h3>
+        <p>After selecting the feature, it triggers from the root node, calculates the information gain of all features for the node, selects the feature with the largest information gain as the node feature, and establishes the child node according to the different values of the feature; the same way is generated for each child node. New child nodes until the information gain is small or no features are available.</p>
+
+        <h3>3. Decision Tree Pruning</h3>
+        <p>The main purpose of pruning is to combat "overfitting" and to reduce the risk of overfitting by actively removing parts of the branch.</p>
+    </div>
+
+    <style>
+        .steps h3 {
+            color: #5AC9CC;
+            margin-top: 20px;
+        }
+        .steps p {
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+    </style>
+
+
+    <!-- Table for Algorithm Comparison -->
+    <h2>Comparison of Decision Trees</h2>
+    <table>
+        <tr>
+            <th>Algorithm</th>
+            <th>Pros</th>
+            <th>Cons</th>
+        </tr>
+        <tr>
+            <td>Decision Tree</td>
+            <td>Easy to interpret, handles both classification and regression</td>
+            <td>Prone to overfitting, sensitive to noisy data</td>
+        </tr>
+        <tr>
+            <td>Random Forest</td>
+            <td>Reduces overfitting, higher accuracy</td>
+            <td>More complex, slower training time</td>
+        </tr>
+        <tr>
+            <td>Gradient Boosting</td>
+            <td>High performance, suitable for complex problems</td>
+            <td>Longer training time, requires careful tuning</td>
+        </tr>
+    </table>
+
+    <!-- Form to Collect User Input -->
+    <h2>Interested in Decision Trees?</h2>
+    <form action="./assets/action/submit.html">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="interest">Interested Topic:</label>
+        <select id="interest" name="interest">
+            <option value="decision_trees">Decision Trees</option>
+            <option value="random_forest">Random Forest</option>
+            <option value="boosting">Boosting Algorithms</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Hyperlink -->
+    <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Decision_tree" target="_blank">Decision Tree on Wikipedia</a>.</p>
+</div>
+
+</body>
+</html>

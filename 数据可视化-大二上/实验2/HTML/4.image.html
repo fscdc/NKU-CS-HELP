@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML-image</title>
+
+        <style>
+            body {
+                /*large image*/
+                /* background-image: url("../Picture/background-2.png"); */
+                /*small image*/
+                background-image: url("../Picture/background.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>图像</h1>
+        <hr>
+        <h2>基本语法</h2>
+        <p>src是图像的地址</p>
+        <img src="../Picture/HTML5.png" alt="HyperText Markup Language"
+        style="float: right;width: 120px;height: 120px;">
+        <p>alt是当浏览器无法加载图像时的替换文本</p>
+        <hr>
+        <h2>图像映射</h2>
+        <p>具有可点击区域的图像，根据位置执行不同的操作</p>
+        <p>img需添加usemap属性，创建图像与图像映射之间的关系</p>
+        <img src="../Picture/workplace.jpg" alt="Workplace" usemap="#workmap">
+
+        <p>可以定义矩形、圆形、多边形或整个区域</p>
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://en.wikipedia.org/wiki/Computer" target="_blank">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://en.wikipedia.org/wiki/Telephone" target="_blank">
+            <!-- <area shape="circle" coords="337,300,44" alt="Coffee" href="https://en.wikipedia.org/wiki/Coffee" target="_blank"> -->
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="https://en.wikipedia.org/wiki/Coffee" target="_blank" onclick="myFunction()">
+        </map>
+
+        <script>
+            function myFunction() {
+              alert("You clicked the coffee cup!");
+            }
+        </script>
+
+        <hr>
+        <h2>背景图片</h2>
+        <p>利用 style，设置 background-image</p>
+    </body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+    "name": "experiment-4",
+    "version": "1.0.0",
+    "description": "A D3 project for visualizing student origins and optimizing chart designs.",
+    "main": "src/script.js",
+    "scripts": {
+        "start": "parcel serve ./src/index.html --port 1314 --open",
+        "build": "parcel build ./src/index.html --out-dir ./dist/"
+    },
+    "dependencies": {
+        "d3": "^7.6.1"
+    },
+    "devDependencies": {
+        "parcel": "^2.12.0",
+        "parcel-bundler": "^1.12.5"
+    },
+    "keywords": [
+        "d3",
+        "data visualization",
+        "single-page application"
+    ],
+    "author": "Sicheng Feng",
+    "license": "MIT"
+}

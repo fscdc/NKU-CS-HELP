@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Overflow</title>
+        <style>
+            div.visible {
+                background-color: #eee;
+                width: 200px;
+                height: 50px;
+                border: 1px dotted black;
+                overflow: visible;
+            }
+
+            div.hidden {
+                background-color: #eee;
+                width: 200px;
+                height: 50px;
+                border: 1px dotted black;
+                overflow: hidden;
+            }
+
+            div.scroll {
+                background-color: #eee;
+                width: 200px;
+                height: 50px;
+                border: 1px dotted black;
+                overflow: scroll;
+            }
+
+            div.auto {
+                background-color: #eee;
+                width: 200px;
+                height: 50px;
+                border: 1px dotted black;
+                overflow: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>CSS 溢出</h1>
+
+        <h2>visible</h2>
+        <p>默认情况下，溢出是可见的，这意味着它不会被裁剪，而是在元素框外渲染：</p>
+
+        <div class="visible">当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。</div>
+
+        <br><br><br>
+
+        <h2>hidden</h2>
+        <p>若使用 hidden 值，会剪裁溢出，并隐藏内容的其余部分：</p>
+        <p>尝试删除 overflow 属性以了解其工作原理。</p>
+
+        <div class="hidden">当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。</div>
+
+        <h2>scroll</h2>
+        <p>将溢出值设置为 scroll，溢出将被裁剪，并添加滚动条以在框内滚动。请注意，这将在水平和垂直方向上添加滚动条（即使您不需要它）：</p>
+
+        <div class="scroll">当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。</div>
+
+        <h2>auto</h2>
+
+        <p>值 auto 类似 scroll，只是在必要时添加滚动条：</p>
+
+        <div class="auto">当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。</div>
+
+    </body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selector</title>
+        <style>
+            /*根据类查找，指定HTML元素*/
+            p.center {
+                text-align: center;
+                color: red;
+            }
+
+            p.large {
+                font-size: 300%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="center">This heading will not be affected</h1>
+        <p class="center">Red and center-aligned paragraph.</p> 
+        <p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
+    </body>
+
+</html>

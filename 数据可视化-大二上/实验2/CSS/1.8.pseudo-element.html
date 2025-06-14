@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Pseudo Element</title>
+        <style>
+            /*第一个字母将继承第一行样式，但::first-letter上的样式会覆盖住冲突的样式*/
+            p::first-letter {
+                color: #ff0000;
+                font-size: xx-large;
+            }
+
+            p::first-line {
+                color: #0000ff;
+                font-variant: small-caps;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the first letter and the first line of a text!</p>
+    </body>
+
+</html>

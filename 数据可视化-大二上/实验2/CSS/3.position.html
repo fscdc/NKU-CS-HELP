@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box Model</title>
+        <style>
+            div.static {
+                position: static;
+                border: 3px solid #73AD21;
+            }
+
+            div.relative1 {
+                position: relative;
+                left: 30px;
+                border: 3px solid #73AD21;
+            }
+
+            div.fixed {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                width: 300px;
+                border: 3px solid #73AD21;
+            }
+
+            div.relative2 {
+                position: relative;
+                width: 400px;
+                height: 200px;
+                border: 3px solid #73AD21;
+            } 
+
+            div.absolute {
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 200px;
+                height: 100px;
+                border: 3px solid #73AD21;
+            }
+
+            div.sticky {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                padding: 5px;
+                background-color: #cae8ca;
+                border: 2px solid #4CAF50;
+            }
+
+            img {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: -1;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>定位</h1>
+
+        <h2>position: static;</h2>
+
+        <p>An element with position: static; is not positioned in any special way; it is 
+        always positioned according to the normal flow of the page:</p>
+
+        <div class="static">
+        This div element has position: static;
+        </div>
+
+        <h2>position: relative;</h2>
+
+        <p>An element with position: relative; is positioned relative to its normal position:</p>
+
+        <div class="relative1">
+        This div element has position: relative;
+        </div>
+
+        <h2>position: fixed;</h2>
+
+        <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+
+        <div class="fixed">
+        This div element has position: fixed;
+        </div>
+
+        <h2>position: absolute;</h2>
+
+        <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+
+        <div class="relative2">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+        </div>
+
+        <h2>position:sticky</h2>
+
+        <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+
+        <div class="sticky">I am sticky!</div>
+
+        <div style="padding-bottom:1500px">
+        <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+        <p>Scroll back up to remove the stickyness.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        </div>
+
+        <h2>position:z-index</h2>
+        <img src="../Picture/CSS.png" width="100" height="141">
+    </body>
+
+</html>

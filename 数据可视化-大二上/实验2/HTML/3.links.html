@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML-Links</title>
+        <style>
+            #a1:hover {
+                color: red;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            #a2 {
+                background-color: burlywood;
+                color: white;
+                display: inline-block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>超链接可以用来跳转到新的文档或者当前文档中的某个部分</h1>
+        <hr>
+        <h2>target 属性</h2>
+        <a href="https://www.nankai.edu.cn/">NKU homepage</a>
+        <!--默认情况下，链接页面将显示在当前浏览器窗口中-->
+        <br>
+        <a href="https://www.nankai.edu.cn/" target="_blank">NKU homepage in new window/tab</a>
+        <br>
+        <h2>链接不一定是文本，可以是图像或其他 HTML 元素</h2>
+        <a href="https://www.nankai.edu.cn/" target="_blank">
+            <img src="../Picture/NKU.png" alt="NKU" style="width:101px;height:101px;">
+        </a>
+        <br>
+        <!--按钮作为链接-->
+        <button onclick="document.location='https://www.nku.edu.cn/'">Button</button>
+
+        <hr>
+        <h2>更改链接本来的样式</h2>
+        <a id="a1" href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN Links</a>
+        <br>
+        <a id="a2" href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN Links</a>
+
+        <hr>
+        <h2>书签跳转</h2>
+        <p><a href="#C4">Jump to Chapter 4</a></p>
+        <p><a href="#C10">Jump to Chapter 10</a></p>
+
+        <h3>Chapter 1</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 2</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 3</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3 id="C4">Chapter 4</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 5</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 6</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 7</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 8</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 9</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3 id="C10">Chapter 10</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 11</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 12</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 13</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 14</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 15</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 16</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 17</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 18</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 19</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 20</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 21</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 22</h3>
+        <p>This chapter explains ba bla bla</p>
+
+        <h3>Chapter 23</h3>
+        <p>This chapter explains ba bla bla</p>
+    </body>
+
+</html>

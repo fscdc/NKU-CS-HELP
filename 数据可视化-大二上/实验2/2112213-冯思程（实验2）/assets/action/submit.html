@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Form Submission</h2>
+        <p>Thank you for your submission!</p>
+        <p><strong>Your Name:</strong> <span id="name"></span></p>
+        <p><strong>Your Email:</strong> <span id="email"></span></p>
+        <p><strong>Interested Topic:</strong> <span id="interest"></span></p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('name').textContent = urlParams.get('name');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('interest').textContent = urlParams.get('interest');
+    </script>
+</body>
+</html>
